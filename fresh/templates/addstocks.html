@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="/addstocks">
+        <h3>{{msg}}</h3>
+        <p>Name : </p>
+        <input name="name" type="text"/>
+      
+        <p>Quantity : </p>
+        <input name="quantity" type="text"/>
+        <p>Price: </p>
+        <input name="price" type="text"/>
+        <p>Total : </p>
+        <input name="total" type="text"/>
+        <input type="submit" value="Add  Stock"/>
+        <a href="/list/{{email}}">show stocks</a>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+   <body>
+
+    <a href="/">HOME</a>
+    <a href="/addstockspage">Add New Stocks</a>
+    <a href="/dashboard">Dashboard</a>
+    <br><hr>
+
+    {{ msg }}
+
+      <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Quantity</td>
+            <td>price</td>
+            <td>Total</td>
+            <td></td>
+         </thead>
+         {% for row in stocks %}
+            <tr>
+               <td>{{row["NAME"]}}</td>
+               <td> {{ row["QUANTITY"]}}</td>
+               <td>{{row["PRICE"]}}</td>
+               <td>{{row['TOTAL']}}</td>	
+               <td><a href="/delete/{{row['NAME']}}">Delete</a></td>	
+            </tr>
+         {% endfor %}
+      </table>
+     
+
+   </body>
+</html>
