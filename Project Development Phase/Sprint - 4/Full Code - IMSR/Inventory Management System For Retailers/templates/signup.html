@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/login.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <section class="wrapper">
+          <div class="heading">
+            <h1 class="text text-large">Sign Up</h1>
+            <p class="text text-normal">Fill in the below details</p>
+          </div>
+          <form method="post" action="/signup" class="form">
+            <div class="input-control">
+              <label for="username" class="input-label" hidden>username</label>
+              <input
+                type="text"
+                name="username"
+                class="input-field"
+                placeholder="Username"
+              />
+            </div>
+            <div class="input-control">
+              <label for="firstname" class="input-label" hidden
+                >firstname</label
+              >
+              <input
+                type="text"
+                name="firstname"
+                class="input-field"
+                placeholder="firstname"
+              />
+            </div>
+            <div class="input-control">
+              <label for="lastname" class="input-label" hidden>Lastname</label>
+              <input
+                type="text"
+                name="lastname"
+                class="input-field"
+                placeholder="lastname"
+              />
+            </div>
+            <div class="input-control">
+              <label for="email" class="input-label" hidden>email</label>
+              <input
+                type="email"
+                name="email"
+                class="input-field"
+                placeholder="email"
+              />
+            </div>
+            <div class="input-control">
+              <label for="username" class="input-label" hidden>password</label>
+              <input
+                type="text"
+                name="password"
+                class="input-field"
+                placeholder="password"
+              />
+            </div>
+
+            <div class="input-control">
+              <input type="submit" class="input-submit" value="signup" />
+            </div>
+            <!-- <input type="submit" value="signup" /> -->
+          </form>
+          <div class="input-control">
+            <button type="submit" class="input-submit">
+              <a href="/">If already have account! click here</a>
+            </button>
+          </div>
+          <!-- <a href="/login">login</a> -->
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

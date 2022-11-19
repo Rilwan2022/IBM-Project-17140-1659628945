@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/table.css" />
+    <link rel="stylesheet" href="../static/css/navbar.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container-nav container-nav">
+        <input type="checkbox" name="" id="" />
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+          <li><a href="/">Home</a></li>
+          <li><a href="/list">Dashboard</a></li>
+          <li><a href="/addstockspage">New stocks</a></li>
+          <!-- <li><a href="#">List</a></li> -->
+        </ul>
+        <h1 class="logo">IMS</h1>
+      </div>
+    </nav>
+    <br />
+    <br />
+    <br /><br /><br /><br /><br /><br />
+    {{ msg }}
+
+    <div class="container">
+      <div class="table">
+        <table cellspacing="0" cellpadding="0">
+          <thead>
+            <tr>
+              <td colspan="2"><font class="header">Available Stocks</font></td>
+              <td colspan="3">
+                <!-- <input class="search" placeholder="Search..." /> -->
+              </td>
+            </tr>
+            <tr>
+              <td>Name</td>
+              <td>Quantity</td>
+              <td>Price</td>
+              <td>Total</td>
+              <td>Delete</td>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in stocks %}
+            <tr>
+              <td>{{row["NAME"]}}</td>
+              <td>{{ row["QUANTITY"]}}</td>
+              <td>{{row["PRICE"]}}</td>
+              <td>{{row['TOTAL']}}</td>
+              <td><a href="/delete/{{row['NAME']}}">Delete</a></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="100%">
+                <div class="pagination"></div>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
